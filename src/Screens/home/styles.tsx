@@ -24,4 +24,11 @@ export const HeaderContent = styled.View`
 export const Title = styled.Text`
     color: ${({theme}) => theme.colors.title};
 `;
-/**06 criar card */
+
+export const MainList =  styled.View`
+    flex: 1;
+    width: 100%;
+    align-items: center;
+    padding: 16px;
+    background-color: ${({theme}) => theme.colors.backgroundSecondary};
+`

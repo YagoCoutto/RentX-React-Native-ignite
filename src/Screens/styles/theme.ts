@@ -8,12 +8,13 @@ export default {
         subTitle: '#AEAEB3',
 
         header: '#1B1B1F',
-        background: '#fff'
+        background: '#fff',
+        backgroundSecondary: '#F5F5F5'
     },
 
     fonts: {
-        AnterRegular: 'Inter_400Regular',
-        AnterMedium: 'Inter_500Medium',
+        InterRegular: 'Inter_400Regular',
+        InterMedium: 'Inter_500Medium',
 
         ArchivoRegular: 'Archivo_400Regular',
         ArchivoMedium: 'Archivo_500Medium',

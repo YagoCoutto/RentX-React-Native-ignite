@@ -8,8 +8,10 @@ import {
     Container,
     Header,
     HeaderContent,
-    Title
+    Title,
+    MainList
 } from './styles'
+import CardCars from '../../components/CardCar/CardCar'; 
 
 export default function Home() {
     return (
@@ -28,6 +30,9 @@ export default function Home() {
                     <Title>Total de 12 carros</Title>
                 </HeaderContent>
             </Header>
+            <MainList>
+                <CardCars/>
+            </MainList>
         </Container>
     )
 }
