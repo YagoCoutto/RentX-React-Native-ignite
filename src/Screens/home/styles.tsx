@@ -25,10 +25,11 @@ export const Title = styled.Text`
     color: ${({theme}) => theme.colors.title};
 `;
 
-export const MainList =  styled.View`
+export const MainList =  styled.ScrollView.attrs({
+    horizontal:false
+})`
     flex: 1;
     width: 100%;
-    align-items: center;
     padding: 16px;
     background-color: ${({theme}) => theme.colors.backgroundSecondary};
 `
