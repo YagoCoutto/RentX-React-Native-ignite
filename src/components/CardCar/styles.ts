@@ -7,8 +7,8 @@ export const Container = styled.View`
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 24px;
-    margin-bottom: 16px;
+
+
     background-color: ${({ theme }) => theme.colors.background};
 `;
 

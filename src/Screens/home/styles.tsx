@@ -1,6 +1,7 @@
 //snipt rnsc
 import styled from 'styled-components/native';
 import { RFValue,RFPercentage } from 'react-native-responsive-fontsize';
+import { getStatusBarHeight } from 'react-native-status-bar-height';
 
 export const Container = styled.View`
     flex:1;
@@ -13,6 +14,8 @@ export const Header = styled.View`
     justify-content: flex-end;
     padding: 0 24px 32px;
     background-color: ${({theme}) => theme.colors.header};
+
+
 `;
 
 export const HeaderContent = styled.View`
