@@ -31,7 +31,7 @@ export const Name = styled.Text`
 export const About = styled.View`
     flex-direction: row;
     align-items: center;
-    margin-top: 5px;
+    margin-top: 15px;
 `;
 
 export const Rent = styled.View`
@@ -54,6 +54,6 @@ export const Price = styled.Text`
 export const Type = styled.View``;
 
 export const CarImage = styled.Image`
-    width: 180px;
-    height: 92px;
+    width: 186px;
+    height: 95px;
 `;

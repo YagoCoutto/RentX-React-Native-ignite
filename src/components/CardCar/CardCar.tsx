@@ -42,7 +42,6 @@ export default function CardCars(
             <Datails>
                 <Brand>{data.brand}</Brand>
                 <Name>{data.name}</Name>
-
                 <About>
                     <Rent>
                         <Period>AO DIA</Period>
@@ -53,7 +52,10 @@ export default function CardCars(
                     </Type>
                 </About>
             </Datails>
-            <CarImage source={{ uri: data.thumbnail }} />
+            <CarImage 
+                source={{ uri: data.thumbnail }} 
+                resizeMode='contain'    
+            />
         </Container>
     )
 }
