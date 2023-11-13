@@ -5,7 +5,8 @@ export default {
         sucess: '#03B252',
 
         title: '#47474D',
-        subTitle: '#AEAEB3',
+        grayLight: '#AEAEB3',
+        grayPrimary: '#F4F5F6',
 
         header: '#1B1B1F',
         background: '#fff',

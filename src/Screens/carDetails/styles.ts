@@ -64,6 +64,12 @@ export const Price = styled.Text`
     font-size: ${RFValue(25)}px;
 `;
 
+export const Acessories = styled.View`
+    flex-direction: row;
+
+    flex-wrap: wrap;
+`;
+
 export const About = styled.Text`
     font-family: ${({theme}) => theme.fonts.ArchivoMedium};
     color: ${({theme}) => theme.colors.subTitle};

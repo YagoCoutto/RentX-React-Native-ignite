@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import {
     CarImages,
     Container,
@@ -11,10 +11,18 @@ import {
     Rent,
     Period,
     Price,
-    About
-} from './styles'
-import BackButton from '../../components/BackButton'
-import ImageSlider from '../../components/ImageSlider'
+    About,
+    Acessories
+} from './styles';
+import BackButton from '../../components/BackButton';
+import ImageSlider from '../../components/ImageSlider';
+import Acessory from '../../components/Acessory';
+import SpeedSVG from '../../assets/Speed.svg';
+import UpSVG from '../../assets/Up.svg';
+import GasolineSVG from '../../assets/Gasolina.svg';
+import PeopleSVG from '../../assets/Pessoas.svg';
+import ChangeSVG from '../../assets/Câmbio.svg';
+import ForceSVG from '../../assets/Força.svg';
 
 export default function CarDetails() {
     return (
@@ -48,6 +56,32 @@ export default function CarDetails() {
                         </Price>
                     </Rent>
                 </Details>
+                <Acessories>
+                    <Acessory
+                        icon={SpeedSVG}
+                        name='380km/h'
+                    />
+                    <Acessory
+                        icon={UpSVG}
+                        name='3.2s'
+                    />
+                    <Acessory
+                        icon={ForceSVG}
+                        name='800 HP'
+                    />
+                    <Acessory
+                        icon={GasolineSVG}
+                        name='Gasolina'
+                    />
+                    <Acessory
+                        icon={ChangeSVG}
+                        name='Auto'
+                    />
+                    <Acessory
+                        icon={PeopleSVG}
+                        name='2 Pessoas'
+                    />
+                </Acessories>
                 <About>
                     Experimente a emoção da estrada com o Mitsubishi Lancer Evolution X!
                     Este ícone esportivo combina potência e desempenho em um design
