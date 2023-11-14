@@ -6,6 +6,7 @@ export default {
 
         title: '#47474D',
         grayLight: '#AEAEB3',
+        grayText: '#7A7A80',
         grayPrimary: '#F4F5F6',
 
         header: '#1B1B1F',

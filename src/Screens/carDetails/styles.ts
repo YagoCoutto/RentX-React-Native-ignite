@@ -38,7 +38,7 @@ export const Description = styled.View``;
 
 export const Brand = styled.Text`
     font-family: ${({theme}) => theme.fonts.ArchivoMedium};
-    color: ${({theme}) => theme.colors.subTitle};
+    color: ${({theme}) => theme.colors.grayLight};
     font-size: ${RFValue(10)}px;
     text-transform: uppercase;
 `;
@@ -53,7 +53,7 @@ export const Rent = styled.View``;
 
 export const Period = styled.Text`
     font-family: ${({theme}) => theme.fonts.ArchivoMedium};
-    color: ${({theme}) => theme.colors.subTitle};
+    color: ${({theme}) => theme.colors.grayLight};
     font-size: ${RFValue(10)}px;
     text-transform: uppercase;
 `;
@@ -67,14 +67,15 @@ export const Price = styled.Text`
 export const Acessories = styled.View`
     flex-direction: row;
 
-    flex-wrap: wrap;
+    flex-wrap: wrap;    
 `;
 
 export const About = styled.Text`
-    font-family: ${({theme}) => theme.fonts.ArchivoMedium};
-    color: ${({theme}) => theme.colors.subTitle};
+    font-family: ${({theme}) => theme.fonts.InterRegular};
+    color: ${({theme}) => theme.colors.grayText};
     font-size: ${RFValue(15)}px;
     text-align: justify;
 
+    letter-spacing: 5px;
     margin-top: 24px;
 `

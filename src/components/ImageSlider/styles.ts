@@ -21,7 +21,7 @@ export const ImageIndex = styled.View<ImageIndexProps>`
     height: 6px;
     margin-left: 8px;
     border-radius: 5px;
-    background-color: ${({theme, active}) => active ? theme.colors.header : theme.colors.subTitle};
+    background-color: ${({theme, active}) => active ? theme.colors.header : theme.colors.grayLight};
 `;
 
 export const CarImageWrapper = styled.View`

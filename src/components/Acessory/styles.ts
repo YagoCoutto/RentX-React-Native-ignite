@@ -10,5 +10,5 @@ export const Container = styled.View`
 `;
 
 export const Name = styled.Text`
-
+    color: ${({theme}) => theme.colors.grayText};
 `;
