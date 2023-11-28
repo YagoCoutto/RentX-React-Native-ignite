@@ -10,5 +10,6 @@ export const Container = styled.View`
 `;
 
 export const Name = styled.Text`
+    margin-top: 11px;
     color: ${({theme}) => theme.colors.grayText};
 `;

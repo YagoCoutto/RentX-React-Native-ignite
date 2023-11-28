@@ -12,7 +12,8 @@ import {
     Period,
     Price,
     About,
-    Acessories
+    Acessories,
+    Footer
 } from './styles';
 import BackButton from '../../components/BackButton';
 import ImageSlider from '../../components/ImageSlider';
@@ -23,12 +24,14 @@ import GasolineSVG from '../../assets/Gasolina.svg';
 import PeopleSVG from '../../assets/Pessoas.svg';
 import ChangeSVG from '../../assets/Câmbio.svg';
 import ForceSVG from '../../assets/Força.svg';
+import Button from '../../components/Button';
 
 export default function CarDetails() {
     return (
         <Container>
             <Header>
                 <BackButton
+                    color='#47474D'
                     onPress={() => { }}
                 />
             </Header>
@@ -83,7 +86,6 @@ export default function CarDetails() {
                     />
                 </Acessories>
                 <About>
-                    Experimente a emoção da estrada com o Mitsubishi Lancer Evolution X!
                     Este ícone esportivo combina potência e desempenho em um design
                     aerodinâmico e agressivo. Com um motor turboalimentado, tração
                     integral e um interior projetado para entusiastas, o EVO X oferece
@@ -91,6 +93,9 @@ export default function CarDetails() {
                     entre estilo e velocidade neste carro lendário.
                 </About>
             </Content>
+            <Footer>
+                <Button title='Escolher período do aluguel'/>
+            </Footer>
         </Container>
     )
 }

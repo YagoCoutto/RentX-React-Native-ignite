@@ -76,6 +76,13 @@ export const About = styled.Text`
     font-size: ${RFValue(15)}px;
     text-align: justify;
 
-    letter-spacing: 5px;
+    line-height: ${RFValue(25)}px;
     margin-top: 24px;
-`
+    padding: 0 15px;
+`;
+
+export const Footer = styled.View`
+    width: 100%;
+    padding: 24px;
+
+`;

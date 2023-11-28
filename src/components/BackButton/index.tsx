@@ -15,12 +15,11 @@ export default function BackButton(
     const theme = useTheme()
     return (
         <GestureHandlerRootView>
-
             <Container {...rest}>
                 <MaterialIcons
                     name='chevron-left'
                     size={24}
-                    color={color ? color : theme.colors.title}
+                    color={color ? color : theme.colors.background}
                 />
             </Container>
         </GestureHandlerRootView>
