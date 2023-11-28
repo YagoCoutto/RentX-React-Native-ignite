@@ -51,3 +51,15 @@ export const DateValue = styled.Text<DateValueProps>`
         border-bottom-color: ${({ theme }) => theme.colors.grayText};
     `}
 `;
+
+export const Content = styled.ScrollView.attrs({
+    contentContainerStyle:{
+        padding: 24,
+        alignItems:'center',
+    }
+})``;
+
+export const Footer = styled.View`
+    width: 100%;
+    padding: 24px;
+`;
