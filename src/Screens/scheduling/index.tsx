@@ -16,6 +16,7 @@ import ArrowSVG from '../../assets/Arrow.svg';
 import Acessory from '../../components/Acessory';
 import { StatusBar } from 'react-native';
 import Button from '../../components/Button';
+import Calendar from '../../components/Calendar';
 
 export default function Scheduling() {
     return (
@@ -51,9 +52,9 @@ export default function Scheduling() {
                     </DateInfo>
                 </RentalPeriod>
             </Header>
-            
-            <Content>
 
+            <Content>
+                <Calendar />
             </Content>
 
             <Footer>
