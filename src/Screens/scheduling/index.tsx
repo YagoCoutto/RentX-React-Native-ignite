@@ -17,8 +17,10 @@ import Acessory from '../../components/Acessory';
 import { StatusBar } from 'react-native';
 import Button from '../../components/Button';
 import Calendar from '../../components/Calendar';
+import { LocaleConfig } from 'react-native-calendars';
 
 export default function Scheduling() {
+
     return (
         <Container>
             <Header>
