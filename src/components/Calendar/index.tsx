@@ -10,7 +10,7 @@ export default function Calendar() {
     const theme = useTheme()
 
     LocaleConfig.locales['pt-br'] = {
-        montNames: [
+        monthNames: [
             'Janeiro',
             'Fevereiro',
             'Março',
@@ -24,7 +24,7 @@ export default function Calendar() {
             'Novembro',
             'Dezembro'
         ],
-        montNamesShort: [
+        monthNamesShort: [
             'Jan',
             'Fev',
             'Mar',
@@ -39,19 +39,20 @@ export default function Calendar() {
             'Dez'
         ],
         dayNames: [
+            'Domingo',
             'Segunda',
             'Terça',
             'Quarta',
             'Quinta',
             'Sexta',
-            'Sabado',
-            'Domingo'
+            'Sabado'            
         ],
-        dayNamesShort: ['SEG', 'TER', 'QUA', 'QUI', 'SEX', 'SAB', 'DOM'],
+        dayNamesShort: ['DOM','SEG', 'TER', 'QUA', 'QUI', 'SEX', 'SAB'],
         today: 'Hoje'
-    }
+    };
+    LocaleConfig.defaultLocale = 'pt-br';
 
-    //LocaleConfig.defaultLocale = 'pt-br';
+
     return (
 
         <CalendarCustom
