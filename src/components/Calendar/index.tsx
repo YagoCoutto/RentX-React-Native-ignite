@@ -72,21 +72,32 @@ export default function Calendar() {
             }}
 
             theme={{
+                textMonthFontSize: 20,
+                textMonthFontFamily: theme.fonts.ArchivoSemiBold,
+
                 textDayFontFamily: theme.fonts.ArchivoSemiBold,
-                textDayHeaderFontFamily: theme.fonts.ArchivoMedium,
-                textDayHeaderFontSize: 10,
+                textDayHeaderFontSize: 12,
+                textDayStyle:{
+                    color: theme.colors.grayText
+                },
+                
+                textDayFontSize: 15,
+
                 arrowStyle: {
                     marginHorizontal: -15
-                }
+                },
+                
             }}
-
+            
             headerStyle={{
                 backgroundColor: theme.colors.backgroundSecondary,
                 borderBottomWidth: 0.5,
                 borderBottomColor: theme.colors.grayLight,
                 paddingBottom: 5,
                 marginBottom: 10,
+                
             }}
+
         />
 
     )
