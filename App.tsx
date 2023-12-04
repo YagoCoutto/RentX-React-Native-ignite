@@ -18,6 +18,7 @@ import Home from './src/Screens/home';
 import theme from './src/Screens/styles/theme';
 import CarDetails from './src/Screens/carDetails';
 import Scheduling from './src/Screens/scheduling';
+import ConfirmRental from './src/Screens/confirmRental';
 
 export default function App() {
   /* 1. Efetuar o carregamento das fontes */
@@ -34,7 +35,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Scheduling />
+      <ConfirmRental />
     </ThemeProvider>
   )
 }

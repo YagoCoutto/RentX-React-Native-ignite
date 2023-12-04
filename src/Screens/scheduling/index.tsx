@@ -43,7 +43,7 @@ export default function Scheduling() {
                 <RentalPeriod>
                     <DateInfo>
                         <DateTitle>DE</DateTitle>
-                        <DateValue selected={false}>18/07/17</DateValue>
+                        <DateValue selected={true}>18/07/17</DateValue>
                     </DateInfo>
 
                     <ArrowSVG />

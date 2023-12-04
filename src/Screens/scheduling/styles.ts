@@ -45,6 +45,8 @@ export const DateTitle = styled.Text`
 
 export const DateValue = styled.Text<DateValueProps>`
     color: ${({ theme }) => theme.colors.background};
+    font-size: ${RFValue(15)}px;
+    font-family: ${({theme}) => theme.fonts.InterMedium};
 
     ${({ selected, theme }) => !selected && css`
         border-bottom-width: 1px;

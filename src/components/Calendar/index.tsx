@@ -78,7 +78,8 @@ export default function Calendar() {
                 textDayFontFamily: theme.fonts.ArchivoSemiBold,
                 textDayHeaderFontSize: 12,
                 textDayStyle:{
-                    color: theme.colors.grayText
+                    color: theme.colors.grayText,
+                    fontFamily: theme.fonts.InterMedium
                 },
                 
                 textDayFontSize: 15,
