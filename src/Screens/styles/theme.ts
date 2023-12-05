@@ -5,6 +5,7 @@ export default {
         sucess: '#03B252',
 
         title: '#47474D',
+        shapeBlack: '#29292E',
         grayLight: '#AEAEB3',
         grayText: '#7A7A80',
         grayPrimary: '#F4F5F6',

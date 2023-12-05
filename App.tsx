@@ -19,6 +19,7 @@ import theme from './src/Screens/styles/theme';
 import CarDetails from './src/Screens/carDetails';
 import Scheduling from './src/Screens/scheduling';
 import SchedulingDetails from './src/Screens/schedulingDetails';
+import SchedulingConcluid from './src/Screens/schedulingConcluid';
 
 export default function App() {
   /* 1. Efetuar o carregamento das fontes */
@@ -35,7 +36,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <SchedulingDetails />
+      <SchedulingConcluid />
     </ThemeProvider>
   )
 }
