@@ -41,7 +41,7 @@ import { MaterialIcons } from '@expo/vector-icons'
 
 
 
-export default function ConfirmRental() {
+export default function SchedulingDetails() {
     return (
         <Container>
             <Header>
@@ -122,7 +122,7 @@ export default function ConfirmRental() {
                         </DateInfo>
                     </PeriodWrapper>
                 </PeriodContainer>
-                <Divisor/>
+                <Divisor />
                 <ValueInformation>
                     <Title>TOTAL</Title>
                     <ValueInfo>
@@ -132,7 +132,10 @@ export default function ConfirmRental() {
                 </ValueInformation>
             </Content>
             <Footer>
-                <Button title='Escolher período do aluguel' />
+                <Button 
+                title='Alugar agora' 
+                color='#03B252'
+                />
             </Footer>
         </Container >
     )

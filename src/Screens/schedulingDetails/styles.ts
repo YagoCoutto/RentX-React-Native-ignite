@@ -49,7 +49,9 @@ export const Name = styled.Text`
     font-size: ${RFValue(25)}px;
 `;
 
-export const Rent = styled.View``;
+export const Rent = styled.View`
+    margin-right: 24px;
+`;
 
 export const Period = styled.Text`
     font-family: ${({ theme }) => theme.fonts.ArchivoMedium};
@@ -74,7 +76,8 @@ export const PeriodContainer = styled.View`
     width: 309px;
     margin: 15px 42px 0 24px;
     flex-direction: row;
-    `;
+    margin-bottom: 16px;
+`;
 
 export const SchedulingWrapper = styled.View`
     width: 48px;
@@ -82,26 +85,35 @@ export const SchedulingWrapper = styled.View`
     align-items: center;
     justify-content: center;
     background-color: ${({ theme }) => theme.colors.primary};
-    `;
+`;
 
 export const PeriodWrapper = styled.View`
     width: 100%;
     align-items: center;
     justify-content: space-around;
     flex-direction: row;
-    `;
+`;
 export const DateInfo = styled.View`
     margin: 0 42px 0 29px;
     flex-direction: column;
 
 `;
-export const DateTitle = styled.Text``;
+export const DateTitle = styled.Text`
+    font-size: ${RFValue(10)}px;
+    font-family: ${({ theme }) => theme.fonts.ArchivoMedium};
+    color: ${({ theme }) => theme.colors.grayLight};
+`;
 
-export const DateValue = styled.Text``;
+export const DateValue = styled.Text`
+    font-size: ${RFValue(15)}px;
+    font-family: ${({ theme }) => theme.fonts.InterMedium};
+    color: ${({ theme }) => theme.colors.title};
+`;
 
 export const Divisor = styled.View`
-    width: 100%;
-    border-bottom-width: 1px;
+    width:90%;
+    border-bottom-width: 0.5px;
+    border-color: ${({ theme }) => theme.colors.grayLight};
 `;
 
 export const ValueInformation = styled.View`
@@ -109,7 +121,11 @@ export const ValueInformation = styled.View`
     margin: 15px 42px 0 24px;
 `;
 
-export const Title = styled.Text``;
+export const Title = styled.Text`
+    font-size: ${RFValue(10)}px;
+    font-family: ${({ theme }) => theme.fonts.ArchivoMedium};
+    color: ${({ theme }) => theme.colors.grayLight};
+`;
 
 export const ValueInfo = styled.View`
     flex-direction: row;
@@ -118,12 +134,20 @@ export const ValueInfo = styled.View`
 
 `;
 
-export const Installments = styled.Text``;
+export const Installments = styled.Text`
+    font-size: ${RFValue(16)}px;
+    font-family: ${({ theme }) => theme.fonts.InterMedium};
+    color: ${({ theme }) => theme.colors.title};
+`;
 
-export const ValueTotal = styled.Text``;
+export const ValueTotal = styled.Text`
+    font-size: ${RFValue(24)}px;
+    font-family: ${({ theme }) => theme.fonts.ArchivoMedium};
+    color: ${({ theme }) => theme.colors.sucess};
+`;
 
 export const Footer = styled.View`
     width: 100%;
     padding: 24px;
-
+    background-color: ${({theme}) => theme.colors.grayPrimary};
 `;
