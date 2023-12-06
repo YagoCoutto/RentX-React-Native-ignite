@@ -1,24 +1,25 @@
+import { RectButton } from 'react-native-gesture-handler';
 import { RFValue } from 'react-native-responsive-fontsize';
 import styled from 'styled-components/native';
 
-export const Container = styled.View`
+export const Container = styled(RectButton)`
     width: 100%;
     height: 126px;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-
-
+    margin-bottom: 16px;
     background-color: ${({ theme }) => theme.colors.background};
 `;
 
 export const Datails = styled.View`
+    padding: 24px;
 `;
 
 export const Brand = styled.Text`
     font-family: ${({ theme }) => theme.fonts.ArchivoMedium};
     font-size: ${RFValue(10)}px;
-    color: ${({ theme }) => theme.colors.subTitle};
+    color: ${({ theme }) => theme.colors.grayLight};
     text-transform: uppercase;
 `;
 
@@ -31,6 +32,7 @@ export const Name = styled.Text`
 export const About = styled.View`
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     margin-top: 15px;
 `;
 
@@ -41,7 +43,7 @@ export const Rent = styled.View`
 export const Period = styled.Text`
     font-family: ${({ theme }) => theme.fonts.ArchivoMedium};
     font-size: ${RFValue(10)}px;
-    color: ${({ theme }) => theme.colors.subTitle};
+    color: ${({ theme }) => theme.colors.grayLight};
     text-transform: uppercase;
 `;
 

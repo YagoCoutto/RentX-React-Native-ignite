@@ -1,7 +1,6 @@
 //snipt rnfc
 import React, { useState, useEffect } from 'react'
 import { RFValue } from 'react-native-responsive-fontsize';
-
 import Logo from '../../assets/Logotipo.svg';
 import { FlatList, StatusBar } from 'react-native'
 import {
@@ -12,9 +11,12 @@ import {
     MainList
 } from './styles'
 import CardCars from '../../components/CardCar/CardCar';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-export default function Home() {
+export default function Home({ navigation }) {
     const  [totCars, setTotCars ] = useState(0);
+
 
     useEffect(() => {
         setTotCars(Object.keys(DataCars).length);
@@ -100,12 +102,16 @@ export default function Home() {
                 </HeaderContent>
             </Header>
             <MainList>
-                <CardCars data={DataCars.CarDataOne} key={1} />
-                <CardCars data={DataCars.CarDataTwo} key={2} />
+                <CardCars 
+                    data={DataCars.CarDataOne} 
+                    key={1} 
+                    onPress={() => navigation.navigate('CarDetails')}
+                    />
+                {/*<CardCars data={DataCars.CarDataTwo} key={2} />
                 <CardCars data={DataCars.CarDataThree} key={3} />
                 <CardCars data={DataCars.CarDataFour} key={4} />
                 <CardCars data={DataCars.CarDataFive} key={5} />
-                <CardCars data={DataCars.CarDataSix} key={6} />
+    <CardCars data={DataCars.CarDataSix} key={6} />*/}
             </MainList>
         </Container>
     )

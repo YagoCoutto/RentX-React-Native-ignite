@@ -13,6 +13,8 @@ import {
     Rent,
     Type
 } from './styles';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
+
 
 interface CarData {
     brand: string,
@@ -20,13 +22,14 @@ interface CarData {
     rent: {
         period: string,
         price: number,
-       // type: 'gasoline' | 'energy'
+        // type: 'gasoline' | 'energy'
     },
-    thumbnail: string
+    thumbnail: string,
 }
 
 interface Props {
-    data: CarData
+    data: CarData,
+    onPress: () => void
 }
 
 const icon = {
@@ -34,28 +37,34 @@ const icon = {
     energy: 'EnergyIcon'
 }
 
+
 export default function CardCars(
-    { data } : Props
+    { data,
+        onPress
+    }: Props
 ) {
+
     return (
-        <Container>
-            <Datails>
-                <Brand>{data.brand}</Brand>
-                <Name>{data.name}</Name>
-                <About>
-                    <Rent>
-                        <Period>AO DIA</Period>
-                        <Price>R$ {data.rent.price}</Price>
-                    </Rent>
-                    <Type>
-                        <GasolineIcon />
-                    </Type>
-                </About>
-            </Datails>
-            <CarImage 
-                source={{ uri: data.thumbnail }} 
-                resizeMode='contain'    
-            />
-        </Container>
+        <GestureHandlerRootView>
+            <Container onPress={onPress}>
+                <Datails>
+                    <Brand>{data.brand}</Brand>
+                    <Name>{data.name}</Name>
+                    <About>
+                        <Rent>
+                            <Period>AO DIA</Period>
+                            <Price>R$ {data.rent.price}</Price>
+                        </Rent>
+                        <Type>
+                            <GasolineIcon />
+                        </Type>
+                    </About>
+                </Datails>
+                <CarImage
+                    source={{ uri: data.thumbnail }}
+                    resizeMode='contain'
+                />
+            </Container>
+        </GestureHandlerRootView>
     )
 }
