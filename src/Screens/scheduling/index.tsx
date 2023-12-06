@@ -19,18 +19,19 @@ import Button from '../../components/Button';
 import Calendar from '../../components/Calendar';
 import { LocaleConfig } from 'react-native-calendars';
 
-export default function Scheduling() {
+export default function Scheduling({ navigation }) {
 
     return (
         <Container>
+            <StatusBar
+                barStyle='light-content'
+                backgroundColor={'transparent'}
+                translucent
+            />
             <Header>
-                <StatusBar
-                    barStyle='light-content'
-                    backgroundColor={'transparent'}
-                    translucent
-                />
+                
                 <BackButton
-                    onPress={() => { }
+                    onPress={() => { navigation.goBack() }
 
                     }
                 />
@@ -62,6 +63,7 @@ export default function Scheduling() {
             <Footer>
                 <Button
                     title='Confirmar'
+                    onPress={() => { navigation.navigate('SchedulingDetails') }}
                 />
             </Footer>
         </Container>

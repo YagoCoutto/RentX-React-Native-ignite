@@ -1,0 +1,6 @@
+Sempre abrir no ip da maquina e passar delay para simular mesmo uma API.
+
+exemplo:
+json-server --watch ./src/services/server.json --host 192.168.10.115 --port 3333 --delay 700
+
+.yarn add axios para lidar com a bliblioteca de requisiçõoes

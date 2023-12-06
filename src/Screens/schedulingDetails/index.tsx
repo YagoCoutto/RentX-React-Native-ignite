@@ -41,13 +41,13 @@ import { MaterialIcons } from '@expo/vector-icons'
 
 
 
-export default function SchedulingDetails() {
+export default function SchedulingDetails({navigation}) {
     return (
         <Container>
             <Header>
                 <BackButton
                     color='#47474D'
-                    onPress={() => { }}
+                    onPress={() => {navigation.goBack()}}
                 />
             </Header>
             <CarImages>
@@ -135,6 +135,7 @@ export default function SchedulingDetails() {
                 <Button 
                 title='Alugar agora' 
                 color='#03B252'
+                onPress={() => {navigation.navigate('SchedulingConcluid')}}
                 />
             </Footer>
         </Container >

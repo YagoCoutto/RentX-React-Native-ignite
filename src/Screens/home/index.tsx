@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react'
 import { RFValue } from 'react-native-responsive-fontsize';
 import Logo from '../../assets/Logotipo.svg';
-import { FlatList, StatusBar } from 'react-native'
+import { StatusBar } from 'react-native'
 import {
     Container,
     Header,
@@ -11,8 +11,6 @@ import {
     MainList
 } from './styles'
 import CardCars from '../../components/CardCar/CardCar';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 export default function Home({ navigation }) {
     const  [totCars, setTotCars ] = useState(0);
@@ -86,7 +84,7 @@ export default function Home({ navigation }) {
     };
 
     return (
-        <Container>
+        <Container >
             <StatusBar
                 barStyle='light-content'
                 backgroundColor={'transparent'}
@@ -111,7 +109,7 @@ export default function Home({ navigation }) {
                 <CardCars data={DataCars.CarDataThree} key={3} />
                 <CardCars data={DataCars.CarDataFour} key={4} />
                 <CardCars data={DataCars.CarDataFive} key={5} />
-    <CardCars data={DataCars.CarDataSix} key={6} />*/}
+                <CardCars data={DataCars.CarDataSix} key={6} />*/}
             </MainList>
         </Container>
     )

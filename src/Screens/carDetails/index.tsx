@@ -25,14 +25,20 @@ import PeopleSVG from '../../assets/Pessoas.svg';
 import ChangeSVG from '../../assets/Câmbio.svg';
 import ForceSVG from '../../assets/Força.svg';
 import Button from '../../components/Button';
+import { StatusBar } from 'react-native';
 
-export default function CarDetails() {
+export default function CarDetails({navigation}) {
     return (
         <Container>
+            <StatusBar
+                barStyle='dark-content'
+                backgroundColor={'transparent'}
+                translucent
+            />
             <Header>
                 <BackButton
                     color='#47474D'
-                    onPress={() => { }}
+                    onPress={() => navigation.goBack()}
                 />
             </Header>
             <CarImages>
@@ -94,7 +100,10 @@ export default function CarDetails() {
                 </About>
             </Content>
             <Footer>
-                <Button title='Escolher período do aluguel'/>
+                <Button 
+                title='Escolher período do aluguel' 
+                onPress={() => {navigation.navigate('Scheduling')}}
+                />
             </Footer>
         </Container>
     )

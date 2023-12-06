@@ -12,7 +12,7 @@ import DoneSVG from '../../assets/Done.svg';
 import ButtonConfirm from '../../components/ButtonConfirm';
 
 
-export default function SchedulingConcluid() {
+export default function SchedulingConcluid({navigation}) {
     const { width } = useWindowDimensions();
     return (
         <Container>
@@ -27,7 +27,9 @@ export default function SchedulingConcluid() {
                     Agora você só precisa ir {'\n'}
                     até a concessionária da RENTX
                 </Description>
-                <ButtonConfirm />
+                <ButtonConfirm 
+                    onPress={() => navigation.navigate('Home')}
+                />
             </Content>
         </Container>
     )
