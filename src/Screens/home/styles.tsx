@@ -2,7 +2,7 @@
 import styled from 'styled-components/native';
 import { RFValue, RFPercentage } from 'react-native-responsive-fontsize';
 import { getStatusBarHeight } from 'react-native-status-bar-height';
-import { FlatList } from 'react-native-gesture-handler';
+import { FlatList } from 'react-native';
 import { CarDTO } from '../../dtos/carDTO';
 
 export const Container = styled.View`

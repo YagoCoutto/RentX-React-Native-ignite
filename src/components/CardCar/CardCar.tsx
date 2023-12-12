@@ -1,6 +1,5 @@
 import React from 'react';
 import GasolineIcon from '../../assets/Energia.svg';
-import EnergyIcon from '../../assets/Energia.svg';
 import {
     About,
     Brand,
@@ -14,7 +13,7 @@ import {
     Type
 } from './styles';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
-
+import { CarDTO } from '../../dtos/carDTO';
 
 interface CarData {
     brand: string,
@@ -22,13 +21,13 @@ interface CarData {
     rent: {
         period: string,
         price: number,
-        // type: 'gasoline' | 'energy'
     },
+    type: string
     thumbnail: string,
 }
 
 interface Props {
-    data: CarData,
+    data: CarDTO,
     onPress: () => void
 }
 
@@ -56,7 +55,7 @@ export default function CardCars(
                             <Price>R$ {data.rent.price}</Price>
                         </Rent>
                         <Type>
-                            <GasolineIcon />
+                            <GasolineIcon/>
                         </Type>
                     </About>
                 </Datails>

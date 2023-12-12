@@ -32,12 +32,9 @@ export default function Home({ navigation }) {
         }//inserir finnaly setloading como false
 
         fetchCars()
-
-        setTotCars(Object.keys(DataCars).length);
-        console.log(totCars)
     }, [])
 
-    const DataCars = {
+   /* const DataCars = {
         CarDataOne: {
             brand: 'audi',
             name: 'RS 5 Coupé',
@@ -97,7 +94,7 @@ export default function Home({ navigation }) {
             thumbnail: 'https://static.wikia.nocookie.net/forzamotorsport/images/0/0f/Mot_mit_lancer_08.png/revision/latest?cb=20190531190611'
         },
 
-    };
+    };*/
 
     return (
         <Container >
@@ -115,17 +112,17 @@ export default function Home({ navigation }) {
                     <Title>Total de {totCars} carros</Title>
                 </HeaderContent>
             </Header>
-            <GestureHandlerRootView>
-                <CardList
-                    data={cars}
-                    keyExtractor={item => item.id}
-                    renderItem={({ item }) =>
-                        <CardCars
-                            data={item}
-                            onPress={() => { navigation.navigate('CarDetails') }}
-                        />}
-                />
-            </GestureHandlerRootView>
+
+            <CardList
+                data={cars}
+                keyExtractor={item => item.id}
+                renderItem={({ item }) =>
+                    <CardCars
+                        data={item}
+                        onPress={() => { navigation.navigate('CarDetails') }}
+                    />}
+            />
+
         </Container >
     )
 }
