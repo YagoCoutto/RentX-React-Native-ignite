@@ -13,14 +13,29 @@ import {
 import CardCars from '../../components/CardCar/CardCar';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
+import instanceAPI from '../../services/api';
+import { CarDTO } from '../../dtos/carDTO';
+
 export default function Home({ navigation }) {
+    const [cars, setCars] = useState<CarDTO[]>([])
     const [totCars, setTotCars] = useState(0);
 
 
     useEffect(() => {
+        async function fetchCars() {
+            try {
+                const response = await instanceAPI.get('/cars')
+                setCars(response.data)
+            } catch (error) {
+                console.log(error)
+            }
+        }//inserir finnaly setloading como false
+
+        fetchCars()
+
         setTotCars(Object.keys(DataCars).length);
         console.log(totCars)
-    })
+    }, [])
 
     const DataCars = {
         CarDataOne: {
@@ -102,14 +117,13 @@ export default function Home({ navigation }) {
             </Header>
             <GestureHandlerRootView>
                 <CardList
-                    data={[1, 2, 3, 4]}
-                    keyExtractor={item => String(item)}
+                    data={cars}
+                    keyExtractor={item => item.id}
                     renderItem={({ item }) =>
                         <CardCars
-                            data={DataCars.CarDataOne}
-                            onPress={() => {navigation.navigate('CarDetails')}}
+                            data={item}
+                            onPress={() => { navigation.navigate('CarDetails') }}
                         />}
-
                 />
             </GestureHandlerRootView>
         </Container >
