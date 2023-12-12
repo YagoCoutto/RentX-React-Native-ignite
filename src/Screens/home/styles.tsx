@@ -2,6 +2,7 @@
 import styled from 'styled-components/native';
 import { RFValue,RFPercentage } from 'react-native-responsive-fontsize';
 import { getStatusBarHeight } from 'react-native-status-bar-height';
+import { FlatList } from 'react-native-gesture-handler';
 
 export const Container = styled.View`
     flex:1;
@@ -28,11 +29,12 @@ export const Title = styled.Text`
     color: ${({theme}) => theme.colors.title};
 `;
 
-export const MainList =  styled.ScrollView.attrs({
-    horizontal:false
+export const CardList =  styled(FlatList).attrs({
+    contentContainerStyle:{
+        padding: 24
+    },
+    showsVerticalScrollIndicator:false
 })`
-    flex: 1;
-    width: 100%;
-    padding: 16px;
+    
     background-color: ${({theme}) => theme.colors.backgroundSecondary};
 `

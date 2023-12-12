@@ -8,12 +8,13 @@ import {
     Header,
     HeaderContent,
     Title,
-    MainList
+    CardList
 } from './styles'
 import CardCars from '../../components/CardCar/CardCar';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 export default function Home({ navigation }) {
-    const  [totCars, setTotCars ] = useState(0);
+    const [totCars, setTotCars] = useState(0);
 
 
     useEffect(() => {
@@ -99,18 +100,18 @@ export default function Home({ navigation }) {
                     <Title>Total de {totCars} carros</Title>
                 </HeaderContent>
             </Header>
-            <MainList>
-                <CardCars 
-                    data={DataCars.CarDataOne} 
-                    key={1} 
-                    onPress={() => navigation.navigate('CarDetails')}
-                    />
-                {/*<CardCars data={DataCars.CarDataTwo} key={2} />
-                <CardCars data={DataCars.CarDataThree} key={3} />
-                <CardCars data={DataCars.CarDataFour} key={4} />
-                <CardCars data={DataCars.CarDataFive} key={5} />
-                <CardCars data={DataCars.CarDataSix} key={6} />*/}
-            </MainList>
-        </Container>
+            <GestureHandlerRootView>
+                <CardList
+                    data={[1, 2, 3, 4]}
+                    keyExtractor={item => String(item)}
+                    renderItem={({ item }) =>
+                        <CardCars
+                            data={DataCars.CarDataOne}
+                            onPress={() => {navigation.navigate('CarDetails')}}
+                        />}
+
+                />
+            </GestureHandlerRootView>
+        </Container >
     )
 }
